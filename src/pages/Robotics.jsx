@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useSeo } from '../lib/seo'
-import { PageHero, Finale, Notice, Flow, Faq } from '../components/Blocks'
+import { PageHero, Finale, Notice, Flow, Faq, CtaBand } from '../components/Blocks'
 import SectionHeading from '../components/SectionHeading'
 import { Card, FactCard } from '../components/Cards'
 import Reveal from '../components/Reveal'
@@ -133,7 +133,8 @@ export default function Robotics() {
             </Card>
             <Card index="05" title="Robot-as-a-Service" delay={240}>
               Subscription models covering the platform, application layer, support and updates as
-              one ongoing service.
+              one ongoing service. The household equivalent is{' '}
+              <Link to="/home" style={{ textDecoration: 'underline' }}>Humoletics Home</Link>.
             </Card>
             <Card index="06" title="Integration" delay={300}>
               Fitting the robot to the workflow: workstation design, fixturing, handover points,
@@ -205,6 +206,20 @@ export default function Robotics() {
             <FactCard value="Neutral" label="Platform stance" note="We recommend the platform that fits the task." delay={80} />
             <FactCard value="Evidence" label="Decision basis" note="Feasibility results before capital commitment." delay={160} />
           </div>
+        </div>
+      </section>
+
+      <section className="band band--dark band--tight">
+        <div className="container">
+          <CtaBand
+            title="Looking for a robot at home rather than at work?"
+            body="Humoletics Home is a proposed Humanoid-as-a-Service rental offering for households — recovery support, independent living, fitness coaching and everyday assistance, without a purchase."
+            actions={
+              <Link to="/home" className="btn">
+                Humoletics Home
+              </Link>
+            }
+          />
         </div>
       </section>
 

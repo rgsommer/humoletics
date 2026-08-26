@@ -155,8 +155,8 @@ export default function Performance() {
                 <Link to="/contact" className="btn">
                   Start a conversation
                 </Link>
-                <Link to="/partners" className="btn btn--ghost">
-                  Partnership options
+                <Link to="/home" className="btn btn--ghost">
+                  Train at home
                 </Link>
               </>
             }

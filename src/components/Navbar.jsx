@@ -2,18 +2,26 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import Logo from './Logo'
 
+/**
+ * `primary: false` links appear in the mobile drawer, the footer and in-page
+ * cross-links, but not in the desktop bar — eleven items overrun the container
+ * at 1440 and compressing them further makes the whole bar unreadable.
+ */
 export const NAV_LINKS = [
   { to: '/experience', label: 'Experience' },
   { to: '/arena', label: 'Arena' },
   { to: '/performance', label: 'Performance' },
   { to: '/active-aging', label: 'Active Aging' },
+  { to: '/home', label: 'At Home' },
   { to: '/robotics', label: 'Robotics' },
   { to: '/labs', label: 'Labs' },
   { to: '/education', label: 'Education' },
-  { to: '/events', label: 'Events' },
+  { to: '/events', label: 'Events', primary: false },
   { to: '/partners', label: 'Partners' },
   { to: '/about', label: 'About' },
 ]
+
+const PRIMARY_LINKS = NAV_LINKS.filter((l) => l.primary !== false)
 
 /**
  * Routes whose hero is light. The nav is transparent at the top of the page,
@@ -57,7 +65,7 @@ export default function Navbar() {
 
           <nav aria-label="Primary">
             <ul className="nav__links">
-              {NAV_LINKS.map((link) => (
+              {PRIMARY_LINKS.map((link) => (
                 <li key={link.to}>
                   <NavLink to={link.to} className="nav__link">
                     {link.label}

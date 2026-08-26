@@ -9,6 +9,7 @@ const COLUMNS = [
       { to: '/arena', label: 'Arena' },
       { to: '/performance', label: 'Performance' },
       { to: '/active-aging', label: 'Active Aging' },
+      { to: '/home', label: 'Humoletics Home' },
       { to: '/education', label: 'Education' },
       { to: '/events', label: 'Events' },
     ],

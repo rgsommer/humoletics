@@ -8,6 +8,7 @@ import Experience from './pages/Experience'
 import Arena from './pages/Arena'
 import Performance from './pages/Performance'
 import ActiveAging from './pages/ActiveAging'
+import HomeService from './pages/HomeService'
 import Robotics from './pages/Robotics'
 import Labs from './pages/Labs'
 import Education from './pages/Education'
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/arena" element={<Arena />} />
           <Route path="/performance" element={<Performance />} />
           <Route path="/active-aging" element={<ActiveAging />} />
+          <Route path="/home" element={<HomeService />} />
           <Route path="/robotics" element={<Robotics />} />
           <Route path="/labs" element={<Labs />} />
           <Route path="/education" element={<Education />} />

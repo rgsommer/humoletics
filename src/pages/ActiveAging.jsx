@@ -429,8 +429,11 @@ export default function ActiveAging() {
                   <Link to="/contact" className="btn">
                     Explore a Research Partnership
                   </Link>
+                  <Link to="/home" className="btn btn--ghost">
+                    Humoletics Home
+                  </Link>
                   <Link to="/phase-one" className="btn btn--ghost">
-                    See the Phase I project
+                    Phase I project
                   </Link>
                 </>
               }

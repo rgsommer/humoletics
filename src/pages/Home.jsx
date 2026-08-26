@@ -290,6 +290,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ======================= HUMOLETICS HOME ====================== */}
+      <section className="band band--dark">
+        <div className="container">
+          <div className="split">
+            <div>
+              <p className="eyebrow">Humoletics Home</p>
+              <h2 className="h1">Don&rsquo;t buy the robot. Hire it.</h2>
+              <p className="lede mt-m">
+                Humanoid-as-a-Service: flexible humanoid rentals for independent living, recovery,
+                activity, companionship and everyday assistance — without buying a robot.
+              </p>
+              <p className="body-copy mt-m">
+                Meet the platforms at Humoletics, try the actual tasks you need in a controlled
+                demonstration, and arrange a rental only when a robot has been shown to do them.
+                Which functions are offered will depend on what individual platforms can genuinely
+                and safely do.
+              </p>
+              <div className="btn-row">
+                <Link to="/home" className="btn">
+                  Explore Humoletics Home
+                </Link>
+                <Link to="/home#capability" className="btn btn--ghost">
+                  What it can actually do
+                </Link>
+              </div>
+            </div>
+
+            <div className="split__media">
+              <Reveal>
+                <div className="panel">
+                  <div className="panel__head">
+                    <span>Rental terms</span>
+                    <span>In development</span>
+                  </div>
+                  <div className="panel__body">
+                    <div className="stat-row">
+                      <span className="stat-row__label">Short-term</span>
+                      <span className="stat-row__value" style={{ fontSize: '1.05rem' }}>
+                        Days to weeks
+                      </span>
+                    </div>
+                    <div className="stat-row stat-row--target">
+                      <span className="stat-row__label">Monthly</span>
+                      <span className="stat-row__value" style={{ fontSize: '1.05rem' }}>
+                        Rolling
+                      </span>
+                    </div>
+                    <div className="stat-row stat-row--best">
+                      <span className="stat-row__label">Long-term</span>
+                      <span className="stat-row__value" style={{ fontSize: '1.05rem' }}>
+                        Full HaaS
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <p className="illustrative-note">
+                  Pricing not yet set. Nothing is available to rent today.
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ====================== BUSINESS ROBOTICS ===================== */}
       <section className="band band--light band--grid">
         <div className="container">
@@ -522,7 +586,7 @@ export default function Home() {
               {
                 num: 'Layer 01',
                 name: 'Experience',
-                desc: 'People experience, compete and train with humanoids — in the Arena, in Performance, in Active Aging and at public events.',
+                desc: 'People experience, compete and train with humanoids — in the Arena, in Performance, in Active Aging, at public events, and eventually at home.',
               },
               {
                 num: 'Layer 02',
