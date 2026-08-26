@@ -476,6 +476,11 @@ export default function HomeService() {
                   The research questions behind this
                 </Link>
               </div>
+              <div className="mt-s">
+                <Link to="/innovation" className="link-arrow">
+                  Innovation &amp; Partnerships
+                </Link>
+              </div>
             </div>
           </div>
         </div>

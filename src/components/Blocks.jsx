@@ -208,3 +208,71 @@ export function Faq({ items }) {
     </Reveal>
   )
 }
+
+/* ---------- the organising pathway: Demonstrate → Test → Develop → Deploy -- */
+export function Pathway({ stages }) {
+  return (
+    <Reveal className="pathway">
+      {stages.map((stage, i) => (
+        <div className="pathway__stage" key={stage.name}>
+          <span className="pathway__step">STEP {String(i + 1).padStart(2, '0')}</span>
+          <span className="pathway__name">{stage.name}</span>
+          <span className="pathway__desc">{stage.desc}</span>
+        </div>
+      ))}
+      <span className="pathway__rail" aria-hidden="true">
+        <span className="pathway__pulse" />
+      </span>
+    </Reveal>
+  )
+}
+
+/* ---------- plain-spoken project status board ---------------------------- */
+const STATUS_CLASS = {
+  done: 'done',
+  progress: 'progress',
+  dev: 'dev',
+  seeking: 'seeking',
+}
+
+export function StatusBoard({ rows }) {
+  return (
+    <Reveal className="status-board">
+      {rows.map((row) => (
+        <div className="status-row" key={row.name}>
+          <div>
+            <p className="status-name">{row.name}</p>
+            {row.note && <p className="status-note">{row.note}</p>}
+          </div>
+          <span className={`status-pill status-pill--${STATUS_CLASS[row.state] || 'dev'}`}>
+            {row.label}
+          </span>
+        </div>
+      ))}
+    </Reveal>
+  )
+}
+
+/* ---------- principle pullquote ------------------------------------------ */
+export function Principle({ children, attrib }) {
+  return (
+    <Reveal className="principle">
+      <p className="principle__text">{children}</p>
+      {attrib && <p className="principle__attrib">{attrib}</p>}
+    </Reveal>
+  )
+}
+
+/* ---------- feasibility question grid ------------------------------------ */
+export function Questions({ items }) {
+  return (
+    <Reveal className="questions">
+      {items.map((q, i) => (
+        <div className="question" key={q}>
+          <span className="question__q">Q{String(i + 1).padStart(2, '0')}</span>
+          <span className="question__text">{q}</span>
+        </div>
+      ))}
+    </Reveal>
+  )
+}

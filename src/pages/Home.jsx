@@ -415,6 +415,9 @@ export default function Home() {
                 <Link to="/robotics" className="btn btn--ghost">
                   Commercial Robotics
                 </Link>
+                <Link to="/innovation" className="btn btn--ghost">
+                  Innovation &amp; Partnerships
+                </Link>
               </div>
             </div>
           </div>

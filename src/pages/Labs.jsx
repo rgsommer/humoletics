@@ -180,9 +180,14 @@ export default function Labs() {
               title="Labs is a Phase I workstream."
               body="The industrial application lab is one of six workstreams in the proposed $500,000 HUMOLETICS Phase I project — alongside platform evaluation, Canadian software development, computer-vision measurement, safety protocols and a public pilot."
               actions={
-                <Link to="/phase-one" className="btn">
-                  See HUMOLETICS Phase I
-                </Link>
+                <>
+                  <Link to="/phase-one" className="btn">
+                    See HUMOLETICS Phase I
+                  </Link>
+                  <Link to="/innovation" className="btn btn--ghost">
+                    Innovation &amp; Partnerships
+                  </Link>
+                </>
               }
             />
           </div>

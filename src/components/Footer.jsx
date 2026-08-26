@@ -20,6 +20,7 @@ const COLUMNS = [
       { to: '/robotics', label: 'Robotics' },
       { to: '/labs', label: 'Labs' },
       { to: '/partners', label: 'Partners' },
+      { to: '/innovation', label: 'Innovation & Partnerships' },
       { to: '/phase-one', label: 'Phase I project' },
       { to: '/contact', label: 'Discuss an Application' },
     ],

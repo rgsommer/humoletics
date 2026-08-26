@@ -18,6 +18,7 @@ export const NAV_LINKS = [
   { to: '/education', label: 'Education' },
   { to: '/events', label: 'Events', primary: false },
   { to: '/partners', label: 'Partners' },
+  { to: '/innovation', label: 'Innovation', primary: false },
   { to: '/about', label: 'About' },
 ]
 

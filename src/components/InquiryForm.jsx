@@ -24,17 +24,31 @@ const EMPTY = {
   email: '',
   phone: '',
   city: '',
+  orgType: '',
   interest: '',
   message: '',
   consent: false,
   company: '', // honeypot
 }
 
+/**
+ * Shared enquiry form. Optional props let a page swap the interest list, add an
+ * organization-type select and relabel the message field, so institutional
+ * pages reuse one validated form and one delivery path rather than forking it.
+ */
 export default function InquiryForm({
   title = 'Tell us what you want to do',
   lede,
   defaultInterest = '',
   id = 'inquiry',
+  interestOptions = INTEREST_OPTIONS,
+  interestLabel = 'I want to',
+  orgTypeOptions,
+  orgTypeLabel = 'Organization type',
+  messageLabel = 'Message',
+  messagePlaceholder = 'Tell us about your group, your event, or the task you would like a humanoid robot to attempt.',
+  submitLabel = 'Send enquiry',
+  subjectPrefix = 'HUMOLETICS enquiry',
 }) {
   const [values, setValues] = useState({ ...EMPTY, interest: defaultInterest })
   const [errors, setErrors] = useState({})
@@ -66,12 +80,15 @@ export default function InquiryForm({
       `Email: ${values.email}`,
       `Phone: ${values.phone || '—'}`,
       `City: ${values.city || '—'}`,
+      orgTypeOptions ? `Organization type: ${values.orgType || '—'}` : null,
       `Interest: ${values.interest}`,
       '',
       values.message,
       '',
       `Consent to updates: ${values.consent ? 'Yes' : 'No'}`,
-    ].join('\n')
+    ]
+      .filter(Boolean)
+      .join('\n')
 
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -109,7 +126,7 @@ export default function InquiryForm({
     }
 
     // No endpoint configured: hand a pre-filled draft to the sender's mail client.
-    const subject = `HUMOLETICS enquiry — ${values.interest}`
+    const subject = `${subjectPrefix} — ${values.interest}`
     window.location.href = `mailto:${INQUIRY_EMAIL}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(composeBody())}`
@@ -236,7 +253,7 @@ export default function InquiryForm({
 
           <div className="field">
             <label className="field__label" htmlFor={`${id}-interest`}>
-              I want to <span className="field__req">*</span>
+              {interestLabel} <span className="field__req">*</span>
             </label>
             <select
               className="select"
@@ -249,7 +266,7 @@ export default function InquiryForm({
               aria-describedby={errors.interest ? `${id}-interest-error` : undefined}
             >
               <option value="">Choose an option…</option>
-              {INTEREST_OPTIONS.map((opt) => (
+              {interestOptions.map((opt) => (
                 <option key={opt} value={opt}>
                   {opt}
                 </option>
@@ -259,16 +276,38 @@ export default function InquiryForm({
           </div>
         </div>
 
+        {orgTypeOptions && (
+          <div className="field">
+            <label className="field__label" htmlFor={`${id}-orgtype`}>
+              {orgTypeLabel}
+            </label>
+            <select
+              className="select"
+              id={`${id}-orgtype`}
+              name="orgType"
+              value={values.orgType}
+              onChange={update('orgType')}
+            >
+              <option value="">Choose an option…</option>
+              {orgTypeOptions.map((opt) => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
         <div className="field">
           <label className="field__label" htmlFor={`${id}-message`}>
-            Message <span className="field__req">*</span>
+            {messageLabel} <span className="field__req">*</span>
           </label>
           <textarea
             className="textarea"
             id={`${id}-message`}
             name="message"
             required
-            placeholder="Tell us about your group, your event, or the task you would like a humanoid robot to attempt."
+            placeholder={messagePlaceholder}
             value={values.message}
             onChange={update('message')}
             aria-invalid={!!errors.message}
@@ -301,7 +340,7 @@ export default function InquiryForm({
 
         <div>
           <button className="btn" type="submit" disabled={sending}>
-            {sending ? 'Sending…' : 'Send enquiry'}
+            {sending ? 'Sending…' : submitLabel}
           </button>
           <p className="form-note mt-s">
             We use the details you provide to respond to your enquiry. HUMOLETICS is a concept in

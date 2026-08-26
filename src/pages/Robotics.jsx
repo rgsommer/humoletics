@@ -173,6 +173,18 @@ export default function Robotics() {
           />
 
           <div className="mt-l">
+            <CtaBand
+              title="Manufacturers, funders and institutions: the wider picture."
+              body="Innovation &amp; Partnerships sets out the demonstration, application-development and commercialization centre this sits inside — the opportunity, the Canadian IP position, partnership categories and project status."
+              actions={
+                <Link to="/innovation" className="btn">
+                  Innovation &amp; Partnerships
+                </Link>
+              }
+            />
+          </div>
+
+          <div className="mt-l">
             <Notice tag="Manufacturer-neutral">
               We are evaluating leading humanoid platforms for Canadian deployment. We are not a
               single-brand dealership, we have no exclusive manufacturer agreement in place, and we

@@ -17,6 +17,7 @@ import Partners from './pages/Partners'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import PhaseOne from './pages/PhaseOne'
+import Innovation from './pages/Innovation'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import NotFound from './pages/NotFound'
@@ -51,6 +52,7 @@ export default function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/events" element={<Events />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/innovation" element={<Innovation />} />
           <Route path="/phase-one" element={<PhaseOne />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

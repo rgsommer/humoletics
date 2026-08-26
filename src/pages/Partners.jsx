@@ -196,8 +196,11 @@ export default function Partners() {
             body="A proposed $500,000, 12–18 month Ontario initiative: platform evaluation, Canadian software development, computer-vision measurement, safety protocols, industrial application pilots and a public pilot. The full budget and workstreams are published."
             actions={
               <>
-                <Link to="/phase-one" className="btn">
-                  See HUMOLETICS Phase I
+                <Link to="/innovation" className="btn">
+                  Innovation &amp; Partnerships
+                </Link>
+                <Link to="/phase-one" className="btn btn--ghost">
+                  Phase I project
                 </Link>
                 <a href="#enquiry" className="btn btn--ghost">
                   Request the brief

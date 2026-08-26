@@ -36,13 +36,17 @@ src/
     Scoreboard.jsx        illustrative Human vs. Humanoid result card
     CoachPanel.jsx        illustrative session-progression panel
     CompareCard.jsx       "the competitor is yesterday" — last session vs today's goal
+    HomeVisual.jsx        the handover — assistance in an ordinary room
+    Capability.jsx        CapabilityTiers + Limits — the Humoletics Home honesty spine
+    HomeWaitlist.jsx      waitlist with a second path routing care orgs to Humoletics Care
     CoachDemo.jsx         animated humanoid-coach interface concept (replayable)
     BudgetChart.jsx       Phase I budget — sorted bars + part-to-whole strip + table view
     InquiryForm.jsx       validated enquiry form (all pages reuse it)
     SectionHeading.jsx    eyebrow + heading + lede, three layouts
     Cards.jsx             Card, Pillar, Metric, FactCard, Discipline, LocationCard
     Blocks.jsx            PageHero, Flow, Chain, Notice, CtaBand, Ticker, Finale, Faq,
-                          Layers (the three-layer strip), VFlow (vertical value chain)
+                          Layers (the three-layer strip), VFlow (vertical value chain),
+                          Pathway, StatusBoard, Principle, Questions (innovation page)
     Reveal.jsx            scroll-triggered reveal wrapper
   pages/                  one file per route
 ```
@@ -83,6 +87,14 @@ VITE_INQUIRY_ENDPOINT=https://api.example.com/inquiries
 The form then sends JSON (`name, organization, email, phone, city, interest, message, consent`)
 and shows a success/failure state. A honeypot field filters basic bots.
 
+### Navigation capacity
+
+The desktop bar holds ten primary links and is already at the width of the 1220
+container. `NAV_LINKS` in `Navbar.jsx` marks lower-priority destinations
+`primary: false` — they appear in the mobile drawer, the footer and in-page
+cross-links, but not the desktop bar. Adding an eleventh primary link overruns
+the container at 1440; measure before adding one.
+
 ## Content rules
 
 The site is written for a venture **in development**. Claims are deliberately constrained:
@@ -92,6 +104,10 @@ The site is written for a venture **in development**. Claims are deliberately co
 - no approved government funding
 - no fabricated logos, testimonials, visitor numbers, press or team members
 - every example figure (times, scores, performance levels, rep counts) is labelled illustrative
+- Humoletics Home separates what platforms can do today, what is emerging, and what
+  needs professional/regulatory validation — plus an explicit list of what a
+  humanoid will *not* do (lift a person, prevent a fall, manage medication,
+  provide treatment, replace a caregiver, handle an emergency)
 
 Keep this in mind when editing copy — `Notice` blocks and `illustrative-note` text exist
 specifically to hold that line.
