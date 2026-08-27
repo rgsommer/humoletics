@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useSeo } from '../lib/seo'
+import { CONTACT_EMAIL } from '../lib/site'
 import { PageHero } from '../components/Blocks'
 
 export default function Terms() {
@@ -91,7 +92,7 @@ export default function Terms() {
 
           <h2>Contact</h2>
           <p>
-            Questions about these terms: <a href="mailto:hello@humoletics.com">hello@humoletics.com</a>{' '}
+            Questions about these terms: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{' '}
             or via the <Link to="/contact">contact form</Link>.
           </p>
         </div>

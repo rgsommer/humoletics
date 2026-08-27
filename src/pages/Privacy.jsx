@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useSeo } from '../lib/seo'
+import { CONTACT_EMAIL } from '../lib/site'
 import { PageHero } from '../components/Blocks'
 
 export default function Privacy() {
@@ -91,7 +92,7 @@ export default function Privacy() {
           <h2>Contact</h2>
           <p>
             For any privacy question or request, write to us at{' '}
-            <a href="mailto:hello@humoletics.com">hello@humoletics.com</a>, or use the{' '}
+            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, or use the{' '}
             <Link to="/contact">contact form</Link>.
           </p>
           <p className="text-muted">

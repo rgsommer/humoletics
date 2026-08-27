@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
+import { CONTACT_EMAIL as INQUIRY_EMAIL } from '../lib/site'
 
-const INQUIRY_EMAIL = 'hello@humoletics.com'
 const ENDPOINT = import.meta.env.VITE_INQUIRY_ENDPOINT
 
 const USES = [

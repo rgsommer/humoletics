@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Reveal from './Reveal'
+import { CONTACT_EMAIL as INQUIRY_EMAIL } from '../lib/site'
 
 export const INTEREST_OPTIONS = [
   'Visit Humoletics',
@@ -13,7 +14,6 @@ export const INTEREST_OPTIONS = [
   'Other',
 ]
 
-const INQUIRY_EMAIL = 'hello@humoletics.com'
 // Set VITE_INQUIRY_ENDPOINT at build time to POST enquiries to a backend.
 // Without it the form composes an email the sender reviews and sends themselves.
 const ENDPOINT = import.meta.env.VITE_INQUIRY_ENDPOINT
