@@ -2753,3 +2753,20 @@ a.model__cell:hover { background: var(--card-bg-hover); }
   padding-top: 3px;
 }
 .question__text { font-size: 0.95rem; line-height: 1.5; color: var(--text); }
+
+/* ---------- no-loss submission fallback ---------- */
+.form__fallback {
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid var(--hairline);
+  border-left: 2px solid var(--human);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+}
+.form__fallback-text {
+  margin-top: 8px;
+  min-height: 190px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}

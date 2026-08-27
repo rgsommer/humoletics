@@ -50,6 +50,8 @@ export default function HomeWaitlist({ id = 'home' }) {
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState(null)
   const [sending, setSending] = useState(false)
+  const [fallback, setFallback] = useState(null)
+  const [copied, setCopied] = useState(false)
 
   const isOrg = values.path === 'organization'
 
@@ -102,7 +104,7 @@ export default function HomeWaitlist({ id = 'home' }) {
       '',
       `Consent to updates: ${values.consent ? 'Yes' : 'No'}`,
     ]
-      .filter(Boolean)
+      .filter((line) => line !== null)
       .join('\n')
 
   const onSubmit = async (e) => {
@@ -145,13 +147,22 @@ export default function HomeWaitlist({ id = 'home' }) {
     const subject = isOrg
       ? 'Humoletics Care enquiry — healthcare / home-care organization'
       : 'Humoletics Home waitlist'
-    window.location.href = `mailto:${INQUIRY_EMAIL}?subject=${encodeURIComponent(
+    const body = composeBody()
+    const href = `mailto:${INQUIRY_EMAIL}?subject=${encodeURIComponent(
       subject
-    )}&body=${encodeURIComponent(composeBody())}`
+    )}&body=${encodeURIComponent(body)}`
+
+    try {
+      window.location.href = href
+    } catch {
+      /* ignore — the fallback panel below covers it */
+    }
+
     setSending(false)
+    setFallback({ body: `To: ${INQUIRY_EMAIL}\nSubject: ${subject}\n\n${body}`, href })
     setStatus({
       kind: 'ok',
-      text: `Your email application should now open with this enquiry ready for you to send. If nothing happened, email ${INQUIRY_EMAIL} and we will pick it up from there.`,
+      text: 'Your enquiry is ready to send. If your email application did not open, copy it below — nothing has been sent automatically.',
     })
   }
 
@@ -364,6 +375,40 @@ export default function HomeWaitlist({ id = 'home' }) {
             <p className={`form__status ${status.kind === 'ok' ? 'form__status--ok' : 'form__status--err'}`}>
               {status.text}
             </p>
+          )}
+          {fallback && (
+            <div className="form__fallback">
+              <label className="field__label" htmlFor={`${id}-fallback`}>
+                Your enquiry
+              </label>
+              <textarea
+                id={`${id}-fallback`}
+                className="textarea form__fallback-text"
+                readOnly
+                value={fallback.body}
+                onFocus={(e) => e.target.select()}
+              />
+              <div className="btn-row" style={{ marginTop: 14 }}>
+                <button
+                  type="button"
+                  className="btn btn--sm"
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText(fallback.body)
+                      setCopied(true)
+                      setTimeout(() => setCopied(false), 2500)
+                    } catch {
+                      setCopied(false)
+                    }
+                  }}
+                >
+                  {copied ? 'Copied' : 'Copy enquiry'}
+                </button>
+                <a className="btn btn--ghost btn--sm" href={fallback.href}>
+                  Open in email app
+                </a>
+              </div>
+            </div>
           )}
         </div>
 
