@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useSeo } from '../lib/seo'
 import { PageHero, Finale, Notice, CtaBand } from '../components/Blocks'
 import SectionHeading from '../components/SectionHeading'
+import { WhatYouGet } from '../components/Value'
 import { Card, FactCard } from '../components/Cards'
 import Reveal from '../components/Reveal'
 
@@ -32,6 +33,27 @@ export default function Education() {
           </>
         }
       />
+
+      <section className="band band--dark band--tight">
+        <div className="container">
+          <WhatYouGet
+            who="If you teach, or run a school or program"
+            headline="Your students get to stand next to the machines they will work alongside."
+            now={[
+              'Tell us your grade level and outcomes, and help shape the programs before they are set',
+              'Early notice of the first school-accessible events in Ontario',
+              'No cost to register interest',
+            ]}
+            later={[
+              'Curriculum-linked visits built around a humanoid in the room, not a video',
+              'Workshops in robotics, coding and embodied AI',
+              'Capstone projects, co-op placements and applied research access for post-secondary',
+              'Career exposure to robotics roles shown as real work',
+            ]}
+            cta={<Link to="/contact" className="btn">Education &amp; Groups</Link>}
+          />
+        </div>
+      </section>
 
       <section className="band band--dark band--grid">
         <div className="container">

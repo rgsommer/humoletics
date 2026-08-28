@@ -13,6 +13,7 @@ import {
   Questions,
 } from '../components/Blocks'
 import SectionHeading from '../components/SectionHeading'
+import { WhatYouGet } from '../components/Value'
 import InquiryForm from '../components/InquiryForm'
 import { Card, FactCard, LocationCard } from '../components/Cards'
 import Reveal from '../components/Reveal'
@@ -194,6 +195,27 @@ export default function Innovation() {
           </>
         }
       />
+
+      <section className="band band--dark band--tight">
+        <div className="container">
+          <WhatYouGet
+            who="If you fund innovation, or represent a region or institution"
+            headline="You get measurable Canadian outcomes, from a partner already telling you what is not secured."
+            now={[
+              'A defined Phase I with published workstreams, budget allocation and deliverables',
+              'A status board stating plainly what is established and what is still being sought',
+              'Influence over scope while it is genuinely still open',
+            ]}
+            later={[
+              'Canadian-owned software and application IP built on top of imported hardware',
+              'SME feasibility pilots with documented results, including the negative ones',
+              'STEM reach and workforce exposure through a venue people choose to visit',
+              'A repeatable model, if Phase I shows it works',
+            ]}
+            cta={<a href="#partner" className="btn">Partner With HUMOLETICS</a>}
+          />
+        </div>
+      </section>
 
       {/* ========================= PATHWAY MOTIF ========================== */}
       <section className="band band--dark band--tight">

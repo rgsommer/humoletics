@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useSeo } from '../lib/seo'
 import { PageHero, Faq, Finale, CtaBand } from '../components/Blocks'
 import SectionHeading from '../components/SectionHeading'
+import { WhatYouGet } from '../components/Value'
 import { Card, FactCard } from '../components/Cards'
 
 export default function Experience() {
@@ -31,6 +32,27 @@ export default function Experience() {
           </>
         }
       />
+
+      <section className="band band--dark band--tight">
+        <div className="container">
+          <WhatYouGet
+            who="If you are coming as a visitor, family or group"
+            headline="You get to find out, in person, whether you can beat a machine."
+            now={[
+              'A place on the early-access list — you hear about the first Ontario events before they are public',
+              'A say in which challenges get built, if you tell us what you would want to try',
+              'No cost, no commitment, and a straight answer about what does not exist yet',
+            ]}
+            later={[
+              'Timed challenges scaled to your age and ability — winnable, losable, worth trying twice',
+              'A score and a personal record that persists between visits',
+              'Something to bring the kids to that is not another screen',
+              'Live demonstrations, and staff who can explain what you are actually watching',
+            ]}
+            cta={<Link to="/contact" className="btn">Join Early Access</Link>}
+          />
+        </div>
+      </section>
 
       <section className="band band--dark band--grid">
         <div className="container">

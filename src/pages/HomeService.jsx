@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useSeo } from '../lib/seo'
 import { PageHero, Finale, Notice, Flow, Chain, CtaBand, Faq } from '../components/Blocks'
 import SectionHeading from '../components/SectionHeading'
+import { WhatYouGet } from '../components/Value'
 import HomeVisual from '../components/HomeVisual'
 import { CapabilityTiers, Limits } from '../components/Capability'
 import HomeWaitlist from '../components/HomeWaitlist'
@@ -133,6 +134,27 @@ export default function HomeService() {
           </>
         }
       />
+
+      <section className="band band--dark band--tight">
+        <div className="container">
+          <WhatYouGet
+            who="If you are thinking about a humanoid at home"
+            headline="You get to try one without buying one — and an honest list of what it will not do."
+            now={[
+              'A published account of what current platforms can and cannot safely do in a home',
+              'A waitlist place with no booking, no deposit and no commitment',
+              'Your description of the task shapes which capabilities we chase first',
+            ]}
+            later={[
+              'Meet the platforms and try your actual tasks before any rental starts',
+              'Short-term, monthly or long-term — no capital purchase',
+              'Delivery, setup, household training and safety guidance included',
+              'Support, maintenance and swaps handled through the term',
+            ]}
+            cta={<a href="#waitlist" className="btn">Join the Waitlist</a>}
+          />
+        </div>
+      </section>
 
       <section className="band band--dark band--tight">
         <div className="container">

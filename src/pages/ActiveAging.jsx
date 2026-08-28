@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useSeo } from '../lib/seo'
 import { PageHero, Finale, Notice, CtaBand, Faq } from '../components/Blocks'
 import SectionHeading from '../components/SectionHeading'
+import { WhatYouGet } from '../components/Value'
 import AgingVisual from '../components/AgingVisual'
 import CoachDemo from '../components/CoachDemo'
 import CompareCard from '../components/CompareCard'
@@ -66,6 +67,27 @@ export default function ActiveAging() {
           </>
         }
       />
+
+      <section className="band band--white band--light band--tight">
+        <div className="container">
+          <WhatYouGet
+            who="If you are an older adult, a family member, or a practitioner"
+            headline="You get a movement partner that never loses count — and a straight list of what it cannot do."
+            now={[
+              'A published, honest account of what humanoids can and cannot safely do around people',
+              'If you work in movement, aging or rehabilitation: influence over what gets built and tested',
+              'No medical claims, and no product being sold to you',
+            ]}
+            later={[
+              'Sessions paced to you rather than to a class or a video',
+              'Your own history as the target — last session, today\u2019s goal, personal best',
+              'Progress recorded rather than remembered',
+              'Community and recreation settings, not clinical ones',
+            ]}
+            cta={<Link to="/contact" className="btn">Explore a Research Partnership</Link>}
+          />
+        </div>
+      </section>
 
       {/* ================== THE ROBOT AS MOVEMENT PARTNER ================== */}
       <section className="band band--white band--light">

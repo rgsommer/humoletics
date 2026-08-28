@@ -7,6 +7,7 @@ import CoachPanel from '../components/CoachPanel'
 import Reveal from '../components/Reveal'
 import { Card, Discipline, LocationCard, Metric, Pillar } from '../components/Cards'
 import { Chain, CtaBand, Finale, Layers, Notice, Ticker } from '../components/Blocks'
+import { AudienceRouter } from '../components/Value'
 
 const PILLARS = [
   {
@@ -141,6 +142,65 @@ export default function Home() {
               a permanent site is secured.
             </Notice>
           </div>
+        </div>
+      </section>
+
+      {/* ========================= WHO ARE YOU? ======================= */}
+      <section className="band band--dark-alt">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Start here"
+            title="What&rsquo;s in it for you?"
+            layout="split"
+            lede="HUMOLETICS serves people who want very different things from the same machines. Find yourself below and we&rsquo;ll take you straight to the part that answers your question."
+          />
+
+          <AudienceRouter
+            items={[
+              {
+                who: 'I want a day out',
+                what: 'Find out whether you can actually beat a robot.',
+                note: 'Timed challenges scaled to you, your kids or your team — a score you can come back and beat.',
+                to: '/experience',
+                cta: 'Plan a visit',
+              },
+              {
+                who: 'I run an operation',
+                what: 'Know if a humanoid can do the job before you spend six figures.',
+                note: 'Bring the task. We recreate it, test real platforms against it, and tell you plainly if the answer is no.',
+                to: '/labs',
+                cta: 'Test a task',
+              },
+              {
+                who: 'I build humanoid robots',
+                what: 'A Canadian route to market that doesn’t cost you a subsidiary.',
+                note: 'Demonstration, evaluation feedback from real tasks, public exposure and qualified commercial leads.',
+                to: '/partners',
+                cta: 'Partner with us',
+              },
+              {
+                who: 'I fund innovation',
+                what: 'Canadian robotics adoption with outcomes you can actually measure.',
+                note: 'A defined Phase I with published workstreams, budget and deliverables — and honesty about what is not secured.',
+                to: '/innovation',
+                cta: 'See the project',
+              },
+              {
+                who: 'I teach or research',
+                what: 'Humanoid platforms your students can stand next to.',
+                note: 'School visits, capstone projects, co-op placements and a live human-robot interaction environment.',
+                to: '/education',
+                cta: 'Programs & groups',
+              },
+              {
+                who: 'I care about someone’s independence',
+                what: 'A movement partner that never loses count.',
+                note: 'Fitness and recreation for older adults, plus an honest published list of what a humanoid cannot do.',
+                to: '/active-aging',
+                cta: 'Active Aging',
+              },
+            ]}
+          />
         </div>
       </section>
 

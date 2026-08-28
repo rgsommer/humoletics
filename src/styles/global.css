@@ -2770,3 +2770,114 @@ a.model__cell:hover { background: var(--card-bg-hover); }
   font-size: 0.8rem;
   line-height: 1.6;
 }
+
+/* ==========================================================================
+   AUDIENCE ROUTER — "which one are you?"
+   Answers what's-in-it-for-me at the entry point, before the reader has to
+   guess which of nine pages is theirs.
+   ========================================================================== */
+.audiences {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--hairline);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+@media (max-width: 900px) { .audiences { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .audiences { grid-template-columns: 1fr; } }
+
+.audience {
+  position: relative;
+  background: var(--surface);
+  padding: clamp(24px, 2.6vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 210px;
+  transition: background 0.24s var(--ease);
+}
+.audience:hover { background: var(--card-bg-hover); }
+.audience__who {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--human);
+}
+.audience__what {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+.audience__note { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+.audience__foot { margin-top: auto; padding-top: 14px; }
+
+/* ==========================================================================
+   WHAT YOU GET — the honest WIIFM block
+   Split into what a reader gains today versus at launch, because a venture in
+   development cannot answer "what's in it for me" with a single promise.
+   ========================================================================== */
+.value-prop {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--card-bg);
+}
+.value-prop__head {
+  padding: clamp(22px, 2.6vw, 30px);
+  border-bottom: 1px solid var(--hairline);
+}
+.value-prop__who {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 12px;
+  display: block;
+}
+.value-prop__headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  max-width: 30ch;
+}
+.value-prop__cols {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+}
+.value-prop__divider { background: var(--hairline); }
+.value-prop__col { padding: clamp(22px, 2.6vw, 30px); }
+.value-prop__label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.value-prop__label::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+.value-prop__col--now .value-prop__label { color: var(--human); }
+.value-prop__col--later .value-prop__label { color: var(--humanoid); }
+.value-prop__foot {
+  padding: 16px clamp(22px, 2.6vw, 30px);
+  border-top: 1px solid var(--hairline);
+}
+@media (max-width: 720px) {
+  .value-prop__cols { grid-template-columns: 1fr; }
+  .value-prop__divider { height: 1px; }
+}

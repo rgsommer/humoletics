@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useSeo } from '../lib/seo'
 import { PageHero, Finale, Notice, Flow, Faq, CtaBand } from '../components/Blocks'
 import SectionHeading from '../components/SectionHeading'
+import { WhatYouGet } from '../components/Value'
 import { Card, FactCard } from '../components/Cards'
 import Reveal from '../components/Reveal'
 
@@ -47,6 +48,27 @@ export default function Robotics() {
           </>
         }
       />
+
+      <section className="band band--dark band--tight">
+        <div className="container">
+          <WhatYouGet
+            who="If you are weighing a humanoid purchase"
+            headline="You get evidence before a capital commitment, not a brochure after one."
+            now={[
+              'A conversation about your specific operation at no cost',
+              'An honest read on whether current platforms are plausible for it',
+              'Independent comparison criteria you can use even if you buy elsewhere',
+            ]}
+            later={[
+              'See multiple platforms move and handle real payloads, side by side',
+              'A documented evaluation across payload, runtime, safety envelope and total cost',
+              'Sale, lease or Robot-as-a-Service — whichever suits your balance sheet',
+              'Integration, operator training and ongoing support from a Canadian base',
+            ]}
+            cta={<Link to="/contact" className="btn">Discuss an Application</Link>}
+          />
+        </div>
+      </section>
 
       <section className="band band--light band--grid">
         <div className="container">
