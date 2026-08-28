@@ -113,38 +113,6 @@ export default function Home() {
 
       <Ticker items={TICKER_ITEMS} />
 
-      {/* ============================ INTRO =========================== */}
-      <section className="band band--dark band--grid">
-        <div className="container">
-          <SectionHeading
-            eyebrow="The concept"
-            title="Humanoid robotics is leaving the laboratory."
-            layout="split"
-            lede="For twenty years humanoid robots lived in research videos. They are now walking into warehouses, gyms, classrooms and shop floors. HUMOLETICS is being built as the place where people and organizations can meet that shift physically — try it, test it, measure it, and decide what to do about it."
-          >
-            <div className="btn-row" style={{ marginTop: 26 }}>
-              <Link to="/experience" className="link-arrow">
-                What a visit looks like
-              </Link>
-            </div>
-          </SectionHeading>
-
-          <div className="grid grid--5">
-            {PILLARS.map((p, i) => (
-              <Pillar key={p.name} {...p} delay={i * 70} />
-            ))}
-          </div>
-
-          <div className="mt-l">
-            <Notice tag="Status">
-              HUMOLETICS is a concept in active development. There is no permanent facility yet.
-              Our first experiences are planned as pop-up and partner-hosted events in Ontario while
-              a permanent site is secured.
-            </Notice>
-          </div>
-        </div>
-      </section>
-
       {/* ========================= WHO ARE YOU? ======================= */}
       <section className="band band--dark-alt">
         <div className="container">
@@ -201,6 +169,38 @@ export default function Home() {
               },
             ]}
           />
+        </div>
+      </section>
+
+      {/* ============================ INTRO =========================== */}
+      <section className="band band--dark band--grid">
+        <div className="container">
+          <SectionHeading
+            eyebrow="The concept"
+            title="Humanoid robotics is leaving the laboratory."
+            layout="split"
+            lede="For twenty years humanoid robots lived in research videos. They are now walking into warehouses, gyms, classrooms and shop floors. HUMOLETICS is being built as the place where people and organizations can meet that shift physically — try it, test it, measure it, and decide what to do about it."
+          >
+            <div className="btn-row" style={{ marginTop: 26 }}>
+              <Link to="/experience" className="link-arrow">
+                What a visit looks like
+              </Link>
+            </div>
+          </SectionHeading>
+
+          <div className="grid grid--5">
+            {PILLARS.map((p, i) => (
+              <Pillar key={p.name} {...p} delay={i * 70} />
+            ))}
+          </div>
+
+          <div className="mt-l">
+            <Notice tag="Status">
+              HUMOLETICS is a concept in active development. There is no permanent facility yet.
+              Our first experiences are planned as pop-up and partner-hosted events in Ontario while
+              a permanent site is secured.
+            </Notice>
+          </div>
         </div>
       </section>
 
