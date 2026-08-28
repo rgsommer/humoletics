@@ -128,8 +128,40 @@ export default function Events() {
           </div>
 
           <div className="mt-l">
+            <div className="split split--top">
+              <div>
+                <h3 className="h2">Dance battle</h3>
+                <p className="body-copy mt-m">
+                  The one that needs no explaining to a room. A human and a humanoid facing each
+                  other on a floor, on a beat — choreographed full-body motion is the thing current
+                  platforms are genuinely best at, which makes this the most deliverable crowd
+                  format we have.
+                </p>
+                <ul className="check-list mt-m">
+                  <li>Guests take on the robot in rounds, scored on accuracy and timing</li>
+                  <li>Difficulty scales through routine complexity, so anyone can enter</li>
+                  <li>Works as a stage set-piece or a rolling floor attraction</li>
+                  <li>As good to watch as it is to take part in — which keeps a queue</li>
+                </ul>
+                <div className="btn-row">
+                  <Link to="/arena" className="btn btn--ghost">
+                    How the rounds work
+                  </Link>
+                </div>
+              </div>
+              <div>
+                <Notice tag="Most deliverable">
+                  Of the formats on this page, the dance battle depends least on capability we do
+                  not yet have. Its first round — the robot performs, guests reproduce — is
+                  supported by what humanoid platforms already do today.
+                </Notice>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-l">
             <Notice tag="In development">
-              Both formats are concepts we are developing, not products you can book today. Which
+              These formats are concepts we are developing, not products you can book today. Which
               elements are offered will depend on what the platform we secure can actually be shown
               to do safely. Tell us which one interests you and it moves up the list.
             </Notice>

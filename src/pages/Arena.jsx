@@ -15,6 +15,7 @@ const EVENTS = [
   { icon: 'compete', word: 'Reps', note: 'Squats & bodyweight' },
   { icon: 'move', word: 'Obstacle', note: 'Course event' },
   { icon: 'compete', word: 'Simple sports', note: 'Target & precision' },
+  { icon: 'dance', word: 'Dance battle', note: 'Copy, mirror, freestyle' },
 ]
 
 export default function Arena() {
@@ -134,6 +135,94 @@ export default function Arena() {
                 </p>
               </Reveal>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ======================== DANCE BATTLE ========================= */}
+      <section className="band band--dark band--grid">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Signature event"
+            title={
+              <>
+                The <span className="accent-human">dance battle</span>.
+              </>
+            }
+            layout="split"
+            lede="Of everything in the Arena, this is the event current humanoids are genuinely best at. Full-body choreographed motion — on beat, at full scale, identical every time — is a real strength of the platforms available today, not a promise about later."
+          />
+
+          <div className="split split--top">
+            <div>
+              <p className="body-copy">
+                It is also the event with the best geometry for a crowd. Two performers facing each
+                other, a floor, a beat, and a room that already knows how to judge what it is
+                watching. Nobody needs the rules explained.
+              </p>
+              <p className="body-copy">
+                The format runs in three rounds of increasing difficulty — and the three map exactly
+                onto what the technology can honestly do now, soon, and later.
+              </p>
+              <div className="btn-row">
+                <Link to="/performance" className="btn btn--ghost">
+                  Learn the choreography first
+                </Link>
+                <Link to="/events" className="btn btn--ghost">
+                  Book it as an event
+                </Link>
+              </div>
+            </div>
+
+            <div>
+              <Reveal>
+                <div className="panel">
+                  <div className="panel__head">
+                    <span>Three rounds</span>
+                    <span>Increasing difficulty</span>
+                  </div>
+                  <div className="panel__body stack-m">
+                    <div>
+                      <p className="mono accent-humanoid">Round 01 · Copy the robot</p>
+                      <p className="body-copy" style={{ fontSize: '0.93rem', marginTop: 8 }}>
+                        It performs a sequence. You reproduce it. Scored on accuracy and timing,
+                        with the routine getting longer and faster as you clear each round. This
+                        one works with today&rsquo;s platforms.
+                      </p>
+                    </div>
+                    <div>
+                      <p className="mono" style={{ color: '#f2a93b' }}>Round 02 · Mirror match</p>
+                      <p className="body-copy" style={{ fontSize: '0.93rem', marginTop: 8 }}>
+                        You move, it follows. Reversing the direction needs reliable real-time
+                        motion capture and response — emerging, and the round we would build second.
+                      </p>
+                    </div>
+                    <div>
+                      <p className="mono text-muted">Round 03 · Freestyle</p>
+                      <p className="body-copy" style={{ fontSize: '0.93rem', marginTop: 8 }}>
+                        A genuine improvised exchange, each side answering the other. This is a
+                        research problem, not a feature. We would rather name it as the ambition
+                        than pretend it is ready.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <p className="illustrative-note">
+                  Round structure is a design concept. Only Round 01 is supported by what current
+                  platforms have been shown to do.
+                </p>
+              </Reveal>
+            </div>
+          </div>
+
+          <div className="mt-l">
+            <Notice tag="Why this one first">
+              If we are looking for the first Arena event to build properly, this is the strongest
+              candidate: it is non-contact by nature, it needs no safety envelope beyond floor space
+              and separation, it scales from a nine-year-old to a trained dancer through routine
+              complexity alone, and it is the rare format that is as good to watch as it is to
+              enter.
+            </Notice>
           </div>
         </div>
       </section>
