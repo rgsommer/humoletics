@@ -16,6 +16,7 @@ const EVENTS = [
   { icon: 'move', word: 'Obstacle', note: 'Course event' },
   { icon: 'compete', word: 'Simple sports', note: 'Target & precision' },
   { icon: 'dance', word: 'Dance battle', note: 'Copy, mirror, freestyle' },
+  { icon: 'relay', word: 'Team relay', note: 'Squad vs one machine' },
 ]
 
 export default function Arena() {
@@ -223,6 +224,89 @@ export default function Arena() {
               complexity alone, and it is the rare format that is as good to watch as it is to
               enter.
             </Notice>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================== TEAM RELAY ========================= */}
+      <section className="band band--dark-alt">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Team event"
+            title={
+              <>
+                The obstacle course <span className="accent-human">relay</span>.
+              </>
+            }
+            layout="split"
+            lede="Your team splits the course between you. The humanoid runs every leg of it alone, back to back, without stopping. Fresh legs and a handover against consistency and no fatigue — which is a far better contest than either side racing flat out."
+          />
+
+          <div className="split split--top">
+            <div>
+              <h3 className="h3">How it runs</h3>
+              <ul className="check-list mt-m">
+                <li><strong>Four to six per team.</strong> Each person takes one leg of the course and tags the next.</li>
+                <li><strong>The humanoid runs solo.</strong> Same course, every leg, one after another, no rest between them.</li>
+                <li><strong>Cumulative time decides it.</strong> Your combined total against its total.</li>
+                <li><strong>Separate lanes throughout.</strong> Non-contact by construction — you never share an obstacle with the machine.</li>
+                <li><strong>Pace is set to the team.</strong> The robot&rsquo;s speed is chosen from your profiles, so a family and a rugby squad both get a real race.</li>
+              </ul>
+              <p className="body-copy mt-m">
+                It is the format that gets a whole group competing at once rather than queuing to take
+                individual turns — which matters for a school group, a corporate booking or a
+                birthday, and matters just as much for how many people a venue can actually put
+                through in an afternoon.
+              </p>
+              <div className="btn-row">
+                <Link to="/events" className="btn btn--ghost">
+                  Book it for a team
+                </Link>
+                <Link to="/education" className="btn btn--ghost">
+                  School group challenges
+                </Link>
+              </div>
+            </div>
+
+            <div>
+              <Reveal>
+                <div className="panel">
+                  <div className="panel__head">
+                    <span>Example result</span>
+                    <span>Illustrative</span>
+                  </div>
+                  <div className="panel__body">
+                    <div className="stat-row">
+                      <span className="stat-row__label">Team · 4 runners</span>
+                      <span className="stat-row__value">3:12.4</span>
+                    </div>
+                    <div className="stat-row stat-row--best">
+                      <span className="stat-row__label">Humanoid · 4 legs solo</span>
+                      <span className="stat-row__value">3:08.9</span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-row__label">Result</span>
+                      <span className="stat-row__value" style={{ fontSize: '1.15rem' }}>
+                        Humanoid by 3.5s
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <p className="illustrative-note">
+                  Example figures only. You will not win every format, and the ones you lose are
+                  usually the ones people come back for.
+                </p>
+              </Reveal>
+
+              <div className="mt-m">
+                <Notice tag="Capability">
+                  A pre-mapped course with fixed, known obstacles at a set pace is within reach of
+                  current platforms. A moving baton handover between a person and a robot is
+                  emerging, and reconfiguring the course between heats is harder again — so the
+                  first version would use a tag point rather than a handover, and a fixed layout.
+                </Notice>
+              </div>
+            </div>
           </div>
         </div>
       </section>

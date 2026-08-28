@@ -160,6 +160,37 @@ export default function Events() {
           </div>
 
           <div className="mt-l">
+            <div className="split split--top">
+              <div>
+                <h3 className="h2">Obstacle course relay</h3>
+                <p className="body-copy mt-m">
+                  The team format. Your group splits the course between you and tags through it;
+                  the humanoid runs every leg alone, back to back, without stopping. Fresh legs and
+                  a handover against consistency and no fatigue.
+                </p>
+                <ul className="check-list mt-m">
+                  <li>Four to six per team — a whole group competing at once, not queuing for turns</li>
+                  <li>Robot pace set from the team&rsquo;s profiles, so any group gets a real race</li>
+                  <li>Separate lanes throughout — non-contact by construction</li>
+                  <li>Natural fit for corporate team-building, school groups and birthdays</li>
+                </ul>
+                <div className="btn-row">
+                  <Link to="/arena" className="btn btn--ghost">
+                    How the relay works
+                  </Link>
+                </div>
+              </div>
+              <div>
+                <Notice tag="Throughput">
+                  Worth noting for anyone booking a room rather than an individual: the relay moves
+                  a whole group through at once. For a venue or an event with a queue, that is the
+                  difference between entertaining six people an hour and sixty.
+                </Notice>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-l">
             <Notice tag="In development">
               These formats are concepts we are developing, not products you can book today. Which
               elements are offered will depend on what the platform we secure can actually be shown

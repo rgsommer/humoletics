@@ -88,6 +88,7 @@ const ICONS = {
   move: 'M12 3l3 3-3 3M12 21l-3-3 3-3M3 12l3-3 3 3M21 12l-3 3-3-3',
   compete: 'M7 4h10v5a5 5 0 01-10 0V4zM9 19h6M12 14v5M5 5h2M17 5h2',
   dance: 'M9 18a2 2 0 11-4 0 2 2 0 014 0zM9 18V6l11-2v10M20 16a2 2 0 11-4 0 2 2 0 014 0z',
+  relay: 'M3 17h4l3-10h4l3 10h4M8 7l-2 4M16 7l2 4',
 }
 
 export function Discipline({ icon = 'run', word, note, delay = 0 }) {
