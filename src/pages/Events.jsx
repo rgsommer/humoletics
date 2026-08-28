@@ -71,6 +71,72 @@ export default function Events() {
         </div>
       </section>
 
+      {/* ================== FORMATS IN DEVELOPMENT ==================== */}
+      <section className="band band--dark-alt">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Formats in development"
+            title="More than a robot in the corner."
+            layout="split"
+            lede="A humanoid on a stand draws a crowd once and gets photographed. These are the formats we are developing so people take part instead — the difference between an attraction and an experience they talk about on Monday."
+          />
+
+          <div className="split split--top">
+            <div>
+              <h3 className="h2">Escape room with a humanoid</h3>
+              <p className="body-copy mt-m">
+                The humanoid is not set dressing. It holds something the team needs, and it will
+                only give it up if they work out how to ask — which makes the puzzle a
+                communication problem rather than a padlock.
+              </p>
+              <ul className="check-list mt-m">
+                <li><strong>The gatekeeper.</strong> It knows the next step and responds only to a correctly formed instruction.</li>
+                <li><strong>The teammate you must direct.</strong> It can reach and do things the team cannot — if they can explain the task precisely enough.</li>
+                <li><strong>The demonstrator.</strong> It performs a sequence once, at speed, and the team has to reproduce or interpret it.</li>
+                <li><strong>The unreliable witness.</strong> It answers literally. Ask the wrong question and you get the wrong answer, correctly.</li>
+              </ul>
+              <p className="body-copy mt-m">
+                Built for teams of four to eight, in a session of roughly an hour — a corporate
+                team-building format that happens to teach people how machines actually interpret
+                instructions.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="h2">Humanoid co-host</h3>
+              <p className="body-copy mt-m">
+                Rent a humanoid as part of the event itself rather than as an exhibit beside it —
+                a co-host that works the room on a defined route through the evening.
+              </p>
+              <ul className="check-list check-list--cyan mt-m">
+                <li>Greeting arrivals and posing for photographs</li>
+                <li>Running scheduled demonstrations through the night</li>
+                <li>Introducing speakers and announcing segments</li>
+                <li>Handing out sealed drinks, giveaways or programmes along a set route</li>
+                <li>Taking on guests in a challenge as the evening&rsquo;s entertainment</li>
+              </ul>
+
+              <div className="mt-m">
+                <Notice tag="Honest limit">
+                  Tray service of open drinks through a moving crowd is beyond what current
+                  humanoid platforms do reliably, and we will not sell it. What is plausible is a
+                  defined route, sealed or pre-packaged items, and a supervised handover — which is
+                  what we would quote for.
+                </Notice>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-l">
+            <Notice tag="In development">
+              Both formats are concepts we are developing, not products you can book today. Which
+              elements are offered will depend on what the platform we secure can actually be shown
+              to do safely. Tell us which one interests you and it moves up the list.
+            </Notice>
+          </div>
+        </div>
+      </section>
+
       <section className="band band--dark-alt">
         <div className="container">
           <SectionHeading

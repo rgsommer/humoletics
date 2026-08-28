@@ -117,7 +117,7 @@ export default function Home() {
       {/* States the shared gap as a fact and lets the cards answer it per
           reader. Deliberately not phrased as a question — the visitor should
           arrive at "this is why I need this" rather than be asked to. */}
-      <section className="band band--dark-alt">
+      <section className="band band--dark-alt band--peek">
         <div className="container">
           <SectionHeading
             title={

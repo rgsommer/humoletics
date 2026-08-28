@@ -85,8 +85,12 @@ export default function Experience() {
               curious adults and curious nine-year-olds alike.
             </Card>
             <Card index="06" title="See what is next" delay={350}>
-              New platforms as they reach Canada, and the applications being developed in
-              HUMOLETICS Labs.
+              New platforms as they reach Canada, the applications being developed in HUMOLETICS
+              Labs, and the formats we are still building — including a{' '}
+              <Link to="/events" style={{ textDecoration: 'underline' }}>
+                humanoid escape room
+              </Link>
+              .
             </Card>
           </div>
         </div>

@@ -517,7 +517,10 @@ a { color: inherit; text-decoration: none; }
    ========================================================================== */
 .hero {
   position: relative;
-  min-height: min(100svh, 940px);
+  /* Deliberately short of a full viewport so the top of the next section
+     shows above the fold — the visitor sees there is an answer waiting
+     rather than having to guess that scrolling is worth it. */
+  min-height: min(72svh, 820px);
   display: flex;
   align-items: center;
   padding: calc(var(--nav-h) + 56px) 0 64px;
@@ -2770,6 +2773,13 @@ a.model__cell:hover { background: var(--card-bg-hover); }
   font-size: 0.8rem;
   line-height: 1.6;
 }
+
+/* First band after the hero: tighter top padding so its heading is what shows
+   above the fold, rather than a strip of empty background. */
+.band--peek { padding-top: clamp(40px, 4vw, 56px); }
+/* top-align the split head here so the heading is not pushed down to meet
+   the lede baseline, which would drop it below the fold */
+.band--peek .section-head--split { align-items: start; }
 
 /* ==========================================================================
    AUDIENCE ROUTER — "which one are you?"

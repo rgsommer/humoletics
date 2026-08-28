@@ -145,6 +145,55 @@ export default function Performance() {
         </div>
       </section>
 
+      {/* ==================== SKILLS, NOT JUST REPS ==================== */}
+      <section className="band band--dark-alt">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Skills"
+            title="Not just repetitions. Technique."
+            layout="split"
+            lede="Counting reps is the easy part. Form is the hard part, and form is learned by watching someone do it correctly — slowly, then at speed, as many times as it takes. A machine performs it identically every time and never tires of your tenth attempt."
+          />
+
+          <div className="grid grid--4">
+            <Card index="01" title="Boxing fundamentals">
+              Stance, guard, footwork and combination patterns, demonstrated at full scale and
+              paced to you. Shadow and form work only.
+            </Card>
+            <Card index="02" title="Fencing footwork" delay={60}>
+              En garde, advance, retreat and lunge mechanics, drilled at whatever tempo you need.
+            </Card>
+            <Card index="03" title="Martial arts forms" delay={120}>
+              Kata and form sequences broken into steps, then repeated exactly.
+            </Card>
+            <Card index="04" title="Golf &amp; racquet swings" delay={180}>
+              Swing path and body sequencing, shown from whichever angle you want to stand at.
+            </Card>
+            <Card index="05" title="Dance &amp; choreography" delay={240}>
+              Sequences demonstrated, slowed, looped and counted in.
+            </Card>
+            <Card index="06" title="Lifting technique" delay={300}>
+              Bar path and positions for compound lifts, unloaded, before you add weight.
+            </Card>
+            <Card index="07" title="Mobility &amp; stretching" delay={360}>
+              Held positions with honest timing rather than a guessed count.
+            </Card>
+            <Card index="08" title="Your own sport" delay={420}>
+              Tell us the movement. If it can be demonstrated repeatably, it is a candidate.
+            </Card>
+          </div>
+
+          <div className="mt-l">
+            <Notice tag="Non-contact">
+              Every format here is demonstration and form coaching. The humanoid shows the movement
+              and paces you through it — it does not spar, strike, fence against you, or make
+              physical contact of any kind. That is a design rule across HUMOLETICS, not a
+              limitation we expect to lift.
+            </Notice>
+          </div>
+        </div>
+      </section>
+
       <section className="band band--dark">
         <div className="container">
           <CtaBand
