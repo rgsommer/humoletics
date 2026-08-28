@@ -113,14 +113,22 @@ export default function Home() {
 
       <Ticker items={TICKER_ITEMS} />
 
-      {/* ========================= WHO ARE YOU? ======================= */}
+      {/* ===================== WHY YOU'D CARE ========================= */}
+      {/* States the shared gap as a fact and lets the cards answer it per
+          reader. Deliberately not phrased as a question — the visitor should
+          arrive at "this is why I need this" rather than be asked to. */}
       <section className="band band--dark-alt">
         <div className="container">
           <SectionHeading
-            eyebrow="Start here"
-            title="What&rsquo;s in it for you?"
+            title={
+              <>
+                You&rsquo;ve seen the videos.
+                <br />
+                You haven&rsquo;t met one.
+              </>
+            }
             layout="split"
-            lede="HUMOLETICS serves people who want very different things from the same machines. Find yourself below and we&rsquo;ll take you straight to the part that answers your question."
+            lede="Humanoid robots are arriving in Canada faster than anywhere to actually encounter one. HUMOLETICS is being built to close that gap — whether you want to race one, find out if it could do a job in your plant, or decide whether Canada should be building the applications that run on it."
           />
 
           <AudienceRouter
